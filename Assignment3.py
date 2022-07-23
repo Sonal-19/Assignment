@@ -1,4 +1,4 @@
-"""Assignment write the output"""
+# """Assignment write the output"""
 
 def a_fun():
      global name
@@ -62,14 +62,14 @@ print("c_var =", c_var)
 print("d_var =", d_var)
 
 """3)output
-in a_func a_var = 15
-in a_func b_var = 115
-in a_func d_var = 30
-in a_func e_var = 25
-a_var = 10
-b_var = 15
-c_var = 125
-d_var = 100"""
+# in a_func a_var = 15
+# in a_func b_var = 115
+# in a_func d_var = 30
+# in a_func e_var = 25
+# a_var = 10
+# b_var = 15
+# c_var = 125
+# d_var = 100"""
 
 
 # 4.
@@ -92,36 +92,50 @@ print (a,b,x,y)
 
 # 5.
 def f():
- x = 42
-def g():
+     x = 42
+     def g():
          global x
          x = 43
-print("Before calling g: ",x)
-g()
-print("After calling g: ",x) 
+     print("Before calling g: ",x)
+     g()
+     print("After calling g: ",x) 
 f()
 print("x in main: " ,x)
 
+"""5)Output
+Before calling g:  42
+After calling g:  42
+x in main:  43 """
+
+
 # 6
 def outer():
-    s="Ludhiana" 
-def inner1():
+     s="Ludhiana" 
+     def inner1():
         s="punjab"
-def inner2():
-                    #nonlocal s
-     s="Chandigarh"
-def inner3():
-     global s
-     s="Haryana"
-print(s) 
-inner1() 
-print(s) 
-inner2()
-print(s) 
-inner3()
-print(s) 
+     def inner2():
+          nonlocal s
+          s="Chandigarh"
+     def inner3():
+          global s
+          s="Haryana"
+     print(s) 
+     inner1() 
+     print(s) 
+     inner2()
+     print(s) 
+     inner3()
+     print(s) 
 outer()
 print(s)
+
+"""6)output
+Ludhiana
+Ludhiana  
+Chandigarh
+Chandigarh
+Haryana"""
+
 
 # 7.
 eid,ename,esal=1,'aaa',10000.56
